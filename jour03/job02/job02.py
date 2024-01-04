@@ -33,6 +33,7 @@ class CompteBancaire():
     def set_agios(self):
         if self.__solde < 0:
             agios = (self.__solde * 15)//100
+            agios = agios * -1
             self.set_retrait(agios)
             print (agios,"€ d'agios ont été percue")
         
@@ -57,6 +58,6 @@ John.get_afficherSolde()
 John.set_agios()
 John.get_afficherSolde()
 Jackie = CompteBancaire(1005,"Welles","Jackie", 5000,"oui")
-Jackie.set_virement(John,2550)
+Jackie.set_virement(John,3450)
 Jackie.get_afficherSolde()
 John.get_afficherSolde()
